@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #592697, #c9ba35);
+    color: #fff;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD600;
+}
+
+.social-icons img {
+    width: 34px;
+    margin-left: 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #592697, #8E24AA);
+    color: rgba(236, 228, 209, 0.979);
+    background-image: url('img/fundo2.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #FFD600;
+    color: #4A148C;
+    padding: 15px 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+#servicos {
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #592697, #c9ba35);
+    text-align: center;
+}
+
+#servicos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #e3d2f7;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #f3e854;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    color: #4A148C;
+    margin-bottom: 10px;
+}
+
+#sobre {
+    padding: 30px 20px;
+    background: linear-gradient(135deg, #592697, #c9ba35);
+    color: #f0d3ec;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#faq {
+    padding: 60px 20px;
+    background: 
+      linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), /* Overlay branco semitransparente */
+      url('img/fundo3.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(218, 31, 31, 0.1);
+}
+
+
+.faq-item {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 15px;
+    border: 2px solid #4A148C;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #6A1B9A;
+    box-shadow: 0 0 5px rgba(106, 27, 154, 0.5);
+}
+
+form button {
+    background-color: #4A148C;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #6A1B9A;
+    transform: translateY(-2px);
+}
+
+footer {
+    background: linear-gradient(135deg, #480797, #af9e05);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+footer .social-icons img {
+    width: 24px;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #592697, #c9ba35);
+    color: #e9e5ee;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 100;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+/* Consultas de Mídia para Responsividade */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .service-card {
+        width: 90%; /* Ajusta a largura dos cartões em telas menores */
+    }
+
+    #servicos, #sobre, #faq {
+        padding: 20px 10px; /* Reduz o padding em telas menores */
+    }
+
+    form {
+        width: 90%; /* Ajusta a largura do formulário */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Ajusta o padding do botão em telas pequenas */
+    }
+
+    footer {
+        padding: 5px 0; /* Reduz o padding do rodapé */
+    }
+}
